@@ -1,6 +1,6 @@
-# Vibes Coding 🌟
+# Code Weaver
 
-A natural language programming system that allows experienced programmers to express their intent in natural language and have it converted to code.
+A natural language programming system that allows experienced programmers to express their intent in natural language/pseudocode and have it converted to python code.
 
 ## Overview
 
