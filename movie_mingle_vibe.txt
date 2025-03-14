@@ -1,0 +1,61 @@
+MovieMingle - A Flask Movie Recommendation Platform
+
+ensure that the app is runnable
+
+Core Features:
+- Public movie lists without user authentication
+- IMDB API integration for movie data and ratings
+- Collaborative movie list creation and sharing
+- AI-powered movie recommendations based on list contents
+- Share lists via unique URLs
+
+Frontend:
+- Clean, modern interface with movie posters
+- Responsive design for all devices
+- Quick search with autocomplete for movies
+- Dynamic list management (add/remove movies)
+- Visual rating display
+- Movie details modal with trailers and info
+- Easy sharing functionality with copy-to-clipboard
+
+Backend:
+- Flask server with RESTful API
+- Integration with IMDB public API
+- csv database for storing:
+  * Movie lists
+  * List metadata (creation date, views, shares)
+  * Movie recommendations
+- Redis cache for frequent queries
+- Recommendation engine using content-based filtering
+
+Data Structure:
+- Movies: id, title, year, rating, genres, poster_url, plot
+- Lists: id, name, description, share_url, created_at
+- List_Movies: list_id, movie_id, added_at
+
+API Endpoints:
+- GET /api/movies/search - Search IMDB movies
+- GET /api/movies/{id} - Get movie details
+- POST /api/lists - Create new list
+- GET /api/lists/{id} - Get list details
+- PUT /api/lists/{id}/movies - Add/remove movies
+- GET /api/recommendations/{list_id} - Get recommendations
+
+Additional Features:
+- List view count tracking
+- One-click list duplication
+- Export lists to CSV/PDF
+- Similar lists suggestion
+- Popular movies section
+- Trending lists section
+- Filter movies by genre, year, rating
+
+Technical Stack:
+- Flask + csv with list identification for storage
+- Redis for caching
+- IMDB-API for movie data
+- Content-based recommendation engine
+- Bootstrap or Tailwind for responsive design
+- Alpine.js for interactive UI components
+
+The system will focus on simplicity and ease of use, allowing anyone to create and share movie lists without the need for registration. The recommendation engine will analyze the movies in each list to suggest similar films based on genres, directors, actors, and overall themes. 

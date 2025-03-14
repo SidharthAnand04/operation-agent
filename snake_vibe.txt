@@ -1,0 +1,41 @@
+import pygame
+
+class SnakeGame: 
+    width height
+    score 
+    board = 2d array of size width x height
+
+    func handly input 
+        use wasd to control direction 
+    
+    func game loop
+        display screen
+        every frame update the head position of the snake 
+        when the snake eats the apple, increase the score by the score of the apple
+        when the snake reaches the end and crashes against the border, it dies 
+    
+    func end game 
+        showcase score and an "game over" on the screen
+
+    func display screen
+        print the screen from the board. use a pygame board that 
+        display the score 
+        show the snake 
+        show the apple as a red circle
+
+
+class snake
+    x, y, len, head position
+
+    func update_pos
+        update the position based on the input of this
+
+class apple: 
+    x, y 
+    score 
+
+    func apple score 
+        generate a random score for the apple
+
+run this code and display whats going on 
+make the code simple so that it works
